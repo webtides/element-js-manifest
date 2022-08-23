@@ -2,18 +2,18 @@
   "name": "@webtides/element-js-manifests",
   "version": "0.1.0",
   "description": "",
-  "customElements": "custom-elements.json",
-  "web-types": "./web-types.json",
+  "customElements": "./example/custom-elements.json",
+  "web-types": "./example/web-types.json",
   "type": "module",
   "bin": {
     "element-js-manifests": "./cli.js"
   },
   "scripts": {
     "start": "web-dev-server --node-resolve --open --watch",
-    "cli": "element-js-manifests --src 'src/**/*.js' --watch",
+    "cli": "element-js-manifests --src 'example/**/*.js' --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Eddy Löwen",
   "license": "MIT",
   "devDependencies": {
     "@lit-labs/ssr": "^2.2.3",

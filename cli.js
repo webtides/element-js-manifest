@@ -9,13 +9,13 @@ const cwd = process.cwd();
 
 const generateManifests = debounce((globs) => {
     console.log('Generating component metadata for', globs);
-    execSync(`node ${cwd}/node_modules/@webtides/element-js-manifests/node_modules/.bin/cem analyze --globs ${globs.join(' ')} --config ${cwd}/node_modules/@webtides/element-js-manifests/custom-elements-manifest.config.mjs`, { stdio: 'inherit' });
+    execSync(`node ${cwd}/node_modules/@webtides/element-js-manifests/node_modules/.bin/cem analyze --globs ${globs.join(' ')} --config ${cwd}/node_modules/@webtides/element-js-manifests/src/custom-elements-manifest.config.mjs`, { stdio: 'inherit' });
 
     const customElementsManifestJSON = readFileSync('custom-elements.json', {encoding: 'utf-8'});
     const customElementsManifest = JSON.parse(customElementsManifestJSON);
 
     const webTypes = {
-        "$schema": "node_modules/@webtides/element-js-manifests/schema/web-types.json",
+        "$schema": "https://json.schemastore.org/web-types",
         "name": "@webtides/element-js",
         "framework": "element-js",
         "version": "0.4.2",
