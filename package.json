@@ -1,7 +1,7 @@
 {
     "name": "@webtides/element-js-manifests",
     "version": "0.1.0",
-    "description": "",
+    "description": "Generates a web-types.json file to provide (JetBrains) IDEs with metadata about Web Components built with @webtides/element-js",
     "customElements": "./example/custom-elements.json",
     "web-types": "./example/web-types.json",
     "type": "module",
