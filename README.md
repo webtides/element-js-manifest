@@ -16,9 +16,9 @@ npm install --save @webtides/element-js-manifests
 
 ```json
 {
-  "devDependecies": {
-    "@webtides/element-js-manifests": "file:../element-js-manifests"
-  }
+    "devDependecies": {
+        "@webtides/element-js-manifests": "file:../element-js-manifests"
+    }
 }
 ```
 
@@ -28,9 +28,9 @@ Add the following task to the scripts' section of your package.json.
 
 ```json
 {
-  "scripts": {
-    "manifest": "element-js-manifests --src 'src/**/*.js' --watch"
-  }
+    "scripts": {
+        "manifest": "element-js-manifests --src 'src/**/*.js' --watch"
+    }
 }
 ```
 
@@ -44,7 +44,7 @@ Add the generated `web-types.json` field to your package.json
 
 ```json
 {
-  "web-types": "./web-types.json"
+    "web-types": "./web-types.json"
 }
 ```
 

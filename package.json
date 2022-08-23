@@ -1,29 +1,59 @@
 {
-  "name": "@webtides/element-js-manifests",
-  "version": "0.1.0",
-  "description": "",
-  "customElements": "./example/custom-elements.json",
-  "web-types": "./example/web-types.json",
-  "type": "module",
-  "bin": {
-    "element-js-manifests": "./cli.js"
-  },
-  "scripts": {
-    "start": "web-dev-server --node-resolve --open --watch",
-    "cli": "element-js-manifests --src 'example/**/*.js' --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Eddy Löwen",
-  "license": "MIT",
-  "devDependencies": {
-    "@lit-labs/ssr": "^2.2.3",
-    "@web/dev-server": "^0.1.34",
-    "@webtides/element-js": "^0.4.3"
-  },
-  "dependencies": {
-    "@custom-elements-manifest/analyzer": "^0.6.4",
-    "chokidar": "^3.5.3",
-    "command-line-args": "^5.2.1",
-    "debounce": "^1.2.1"
-  }
+    "name": "@webtides/element-js-manifests",
+    "version": "0.1.0",
+    "description": "",
+    "customElements": "./example/custom-elements.json",
+    "web-types": "./example/web-types.json",
+    "type": "module",
+    "bin": {
+        "element-js-manifests": "./cli.js"
+    },
+    "scripts": {
+        "start": "web-dev-server --node-resolve --open --watch",
+        "cli": "element-js-manifests --src 'example/**/*.js' --watch",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Eddy Löwen",
+    "license": "MIT",
+    "devDependencies": {
+        "@lit-labs/ssr": "^2.2.3",
+        "@web/dev-server": "^0.1.34",
+        "@webtides/element-js": "^0.4.3",
+        "prettier": "^2.7.1"
+    },
+    "dependencies": {
+        "@custom-elements-manifest/analyzer": "^0.6.4",
+        "chokidar": "^3.5.3",
+        "command-line-args": "^5.2.1",
+        "debounce": "^1.2.1"
+    },
+    "prettier": {
+        "endOfLine": "lf",
+        "printWidth": 120,
+        "trailingComma": "all",
+        "tabWidth": 4,
+        "semi": true,
+        "singleQuote": true,
+        "arrowParens": "always",
+        "overrides": [
+            {
+                "files": "*.md",
+                "options": {
+                    "useTabs": false,
+                    "trailingComma": "none",
+                    "proseWrap": "never"
+                }
+            },
+            {
+                "files": [
+                    "*.css",
+                    "*.yaml",
+                    "*.yml"
+                ],
+                "options": {
+                    "tabWidth": 2
+                }
+            }
+        ]
+    }
 }

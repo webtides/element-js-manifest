@@ -7,9 +7,7 @@
     "default-icon": "icons/angular2.svg",
     "framework-config": {
         "enable-when": {
-            "node-packages": [
-                "@webtides/element-js"
-            ]
+            "node-packages": ["@webtides/element-js"]
         }
     },
     "contributions": {
@@ -18,9 +16,7 @@
                 {
                     "name": "flex",
                     "description": "The `<flex>` layout ...",
-                    "exclusive-contributions": [
-                        "/html/attributes"
-                    ],
+                    "exclusive-contributions": ["/html/attributes"],
                     "attributes": [
                         {
                             "description": "The way to flex",
@@ -85,9 +81,7 @@
                 {
                     "name": "my-element",
                     "description": "This is my simple element :) :)",
-                    "exclusive-contributions": [
-                        "/html/attributes"
-                    ],
+                    "exclusive-contributions": ["/html/attributes"],
                     "attributes": [
                         {
                             "description": "",
@@ -110,9 +104,7 @@
                 {
                     "name": "test-element",
                     "description": "",
-                    "exclusive-contributions": [
-                        "/html/attributes"
-                    ],
+                    "exclusive-contributions": ["/html/attributes"],
                     "attributes": [
                         {
                             "description": "",
