@@ -4,7 +4,6 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import commandLineArgs from 'command-line-args';
 import chokidar from 'chokidar';
 import debounce from 'debounce';
-import globby from 'globby';
 
 const cwd = process.cwd();
 
@@ -31,75 +30,7 @@ const generateManifests = debounce((globs) => {
         },
         "contributions": {
             "html": {
-                "elements": [
-                    {
-                        "name": "flex",
-                        "description": "The `<flex>` layout ...",
-                        "exclusive-contributions": [
-                            "/html/attributes"
-                        ],
-                        "attributes": [
-                            {
-                                "description": "The way to flex",
-                                "name": "direction",
-                                "priority": "highest",
-                                "value": {
-                                    "kind": "plain",
-                                    "type": "enum"
-                                },
-                                "values": [
-                                    {
-                                        "name": "row"
-                                    },
-                                    {
-                                        "name": "col"
-                                    }
-                                ]
-                            },
-                            {
-                                "description": "",
-                                "name": "align",
-                                "value": {
-                                    "kind": "plain",
-                                    "type": "enum"
-                                },
-                                "values": [
-                                    {
-                                        "name": "start"
-                                    },
-                                    {
-                                        "name": "center"
-                                    },
-                                    {
-                                        "name": "end"
-                                    }
-                                ]
-                            },
-                            {
-                                "description": "",
-                                "name": "justify",
-                                "value": {
-                                    "kind": "plain",
-                                    "type": "enum"
-                                },
-                                "values": [
-                                    {
-                                        "name": "start"
-                                    },
-                                    {
-                                        "name": "between"
-                                    },
-                                    {
-                                        "name": "around"
-                                    },
-                                    {
-                                        "name": "end"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
+                "elements": []
             }
         }
     }
@@ -130,6 +61,7 @@ const generateManifests = debounce((globs) => {
                 "symbol": "default",
             }
         }
+        // TODO: check if export is actually default export and switch between named and default exports
         //"symbol": defaultExport.declaration.name,
 
         webTypes.contributions.html.elements.push(element);
@@ -156,12 +88,7 @@ const optionDefinitions = [
     { name: 'watch', type: Boolean },
 ]
 
-
 const options = commandLineArgs(optionDefinitions)
-const paths = await globby([...options.src]);
-console.log('options', options);
-console.log('paths', paths);
-console.log('process.cwd()', process.cwd());
 
 if (options.watch) {
     watch(options.src);
