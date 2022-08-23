@@ -127,9 +127,10 @@ const generateManifests = debounce((globs) => {
             ],
             "source": {
                 "module": module.path,
-                "symbol": defaultExport.declaration.name,
+                "symbol": "default",
             }
         }
+        //"symbol": defaultExport.declaration.name,
 
         webTypes.contributions.html.elements.push(element);
     }
