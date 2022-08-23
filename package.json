@@ -9,7 +9,7 @@
         "element-js-manifests": "./cli.js"
     },
     "scripts": {
-        "start": "web-dev-server --node-resolve --open --watch",
+        "start": "web-dev-server --node-resolve --root-dir example --watch",
         "cli": "element-js-manifests --src 'example/**/*.js' --watch",
         "test": "echo \"Error: no test specified\" && exit 1"
     },

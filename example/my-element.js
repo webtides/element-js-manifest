@@ -5,13 +5,13 @@ import { html, TemplateElement, defineElement } from '@webtides/element-js';
  */
 export default class MyElement extends TemplateElement {
     styles() {
-        return `
-            :host {
+        return [`
+            my-element {
                 display: block;
                 padding: 25px;
                 color: var(--my-element-text-color, #000);
             }
-        `;
+        `];
     }
 
     properties() {
