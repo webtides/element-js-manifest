@@ -1,0 +1,138 @@
+{
+    "$schema": "https://json.schemastore.org/web-types",
+    "name": "@webtides/element-js",
+    "framework": "element-js",
+    "version": "0.4.2",
+    "description-markup": "markdown",
+    "default-icon": "icons/angular2.svg",
+    "framework-config": {
+        "enable-when": {
+            "node-packages": [
+                "@webtides/element-js"
+            ]
+        }
+    },
+    "contributions": {
+        "html": {
+            "elements": [
+                {
+                    "name": "flex",
+                    "description": "The `<flex>` layout ...",
+                    "exclusive-contributions": [
+                        "/html/attributes"
+                    ],
+                    "attributes": [
+                        {
+                            "description": "The way to flex",
+                            "name": "direction",
+                            "priority": "highest",
+                            "value": {
+                                "kind": "plain",
+                                "type": "enum"
+                            },
+                            "values": [
+                                {
+                                    "name": "row"
+                                },
+                                {
+                                    "name": "col"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "",
+                            "name": "align",
+                            "value": {
+                                "kind": "plain",
+                                "type": "enum"
+                            },
+                            "values": [
+                                {
+                                    "name": "start"
+                                },
+                                {
+                                    "name": "center"
+                                },
+                                {
+                                    "name": "end"
+                                }
+                            ]
+                        },
+                        {
+                            "description": "",
+                            "name": "justify",
+                            "value": {
+                                "kind": "plain",
+                                "type": "enum"
+                            },
+                            "values": [
+                                {
+                                    "name": "start"
+                                },
+                                {
+                                    "name": "between"
+                                },
+                                {
+                                    "name": "around"
+                                },
+                                {
+                                    "name": "end"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "my-element",
+                    "description": "This is my simple element :) :)",
+                    "exclusive-contributions": [
+                        "/html/attributes"
+                    ],
+                    "attributes": [
+                        {
+                            "description": "",
+                            "name": "title"
+                        },
+                        {
+                            "description": "",
+                            "name": "counter"
+                        },
+                        {
+                            "description": "Finally we can have the class attribute back!",
+                            "name": "class"
+                        }
+                    ],
+                    "source": {
+                        "module": "src/my-element.js",
+                        "symbol": "MyElement"
+                    }
+                },
+                {
+                    "name": "test-element",
+                    "description": "",
+                    "exclusive-contributions": [
+                        "/html/attributes"
+                    ],
+                    "attributes": [
+                        {
+                            "description": "",
+                            "name": "title"
+                        },
+                        {
+                            "description": "",
+                            "name": "counter"
+                        },
+                        {
+                            "description": "Finally we can have the class attribute back!",
+                            "name": "class"
+                        }
+                    ],
+                    "source": {
+                        "module": "src/test-element.js",
+                        "symbol": "TestElement"
+                    }
+                }
+            ]
+        }
+    }
+}
