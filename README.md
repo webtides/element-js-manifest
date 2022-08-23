@@ -1,6 +1,7 @@
 # element-js-manifests
 
 Generates a `web-types.json` file to provide (JetBrains) IDEs with metadata about Web Components built with `@webtides/element-js`.
+For more info on the schema see: https://github.com/JetBrains/web-types
 
 ## How to use
 
