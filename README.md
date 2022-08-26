@@ -13,16 +13,6 @@ install `element-js-manifests`
 npm install --save @webtides/element-js-manifests
 ```
 
-> IMPORTANT: This library is not yet released to the npm registry. For now please link the module locally by adding it manually to the package.json.
-
-```json
-{
-    "devDependecies": {
-        "@webtides/element-js-manifests": "file:../element-js-manifests"
-    }
-}
-```
-
 #### Use
 
 Add the following task to the scripts' section of your package.json.
